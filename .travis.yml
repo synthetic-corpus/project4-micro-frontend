@@ -22,7 +22,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t 05-front-end .
-  - docker tag 05-api-users gonzaga626/05-front-end:latest
+  - docker tag 05-front-end gonzaga626/05-front-end:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
