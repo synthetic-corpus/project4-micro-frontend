@@ -16,6 +16,13 @@ spec:
     spec:
       containers:
       - name: frontend-svc
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m" 
         image: gonzaga626/05-front-end
         ports:
         - containerPort: 80
